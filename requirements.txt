@@ -1,0 +1,34 @@
+# =============================================================================
+# Requirements - Customer Segmentation Project
+# Pour installation rapide sans pyproject.toml (compatibilité CI/Docker)
+# Référence: pyproject.toml pour config complète
+# =============================================================================
+
+# Core
+numpy>=1.26.0
+pandas>=2.1.0
+scipy>=1.11.0
+scikit-learn>=1.4.0
+
+# Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+plotly>=5.18.0
+yellowbrick>=1.5
+
+# Data Processing
+openpyxl>=3.1.0
+pyyaml>=6.0
+
+# Notebooks
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Web App
+streamlit>=1.31.0
+
+# Dev (optional)
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
+isort>=5.12.0

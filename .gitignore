@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+env/
+venv/
+*.egg-info/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data (raw data too large for git)
+data/raw/*.xlsx
+data/raw/*.csv
+data/processed/*.csv
+data/features/*.csv
+*.pkl
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Outputs (regenerable)
+outputs/models/*.pkl
+outputs/figures/*.png
+outputs/figures/*.pdf
+
+# Internal tracking (session recovery)
+user_inter.md
+
+# Environment
+.env
+*.env.local

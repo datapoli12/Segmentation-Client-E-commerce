@@ -1,0 +1,105 @@
+# =============================================================================
+# pyproject.toml - Customer Segmentation Project
+# =============================================================================
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "customer-segmentation"
+version = "0.1.0"
+description = "Customer Segmentation using RFM Analysis and Unsupervised Clustering"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    {name = "Apollinaire Eyitayo MONTEIRO"}
+]
+keywords = ["clustering", "rfm", "customer-segmentation", "machine-learning", "kmeans", "dbscan"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "numpy>=1.26.0",
+    "pandas>=2.1.0",
+    "scikit-learn>=1.4.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+    "scipy>=1.11.0",
+    "pyyaml>=6.0",
+    "openpyxl>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "isort>=5.12.0",
+]
+notebooks = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.0.0",
+    "plotly>=5.18.0",
+    "yellowbrick>=1.5",
+]
+app = [
+    "streamlit>=1.31.0",
+]
+all = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "isort>=5.12.0",
+    "jupyter>=1.0.0",
+    "ipykernel>=6.0.0",
+    "plotly>=5.18.0",
+    "yellowbrick>=1.5",
+    "streamlit>=1.31.0",
+]
+
+[project.urls]
+Repository = "https://github.com/datapoli12/Segmentation-Client-E-commerce"
+
+# =============================================================================
+# Tools Configuration
+# =============================================================================
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+    | \.venv
+    | build
+    | dist
+    | __pycache__
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip = [".git", ".venv", "build", "dist"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.flake8]
+max-line-length = 100
+exclude = [".git", "__pycache__", "build", "dist", ".venv"]
+ignore = ["E203", "W503"]
