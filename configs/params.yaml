@@ -27,6 +27,7 @@ preprocessing:
 rfm:
   scaling_method: "robust"  # "standard" ou "robust"
   features: ["Recency", "Frequency", "Monetary"]
+  winsorize_percentile: 95  # Cap outliers au percentile 95 avant scaling
 
 # -----------------------------------------------------------------------------
 # Modélisation
