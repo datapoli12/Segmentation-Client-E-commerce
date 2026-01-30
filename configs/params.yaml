@@ -18,6 +18,7 @@ preprocessing:
   drop_na_customer: true
   remove_negative_quantity: true
   remove_zero_price: true
+  remove_cancelled_invoices: true  # InvoiceNo commençant par "C"
   min_monetary: 0  # Montant minimum par client
 
 # -----------------------------------------------------------------------------
